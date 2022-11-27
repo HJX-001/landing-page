@@ -1,1 +1,179 @@
+:root {
+	--dark-bg-color: #1F2937;
+	--txt-color: #F9FAF8;
+	--subtxt-color: #E5E7EB;
+	--btn-color: #3882F6;
+	--ttl-txt-color: #1F2937;
 
+	--txt-shadow: 0 0.1em 0.5em gray;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+/*	border: 1px solid red;*/
+}
+
+a {
+	text-decoration: none;
+	color: var(--subtxt-color);
+}
+
+button {
+	background: var(--btn-color);
+	color: var(--txt-color);
+	border: 0.2em solid white;
+	border-radius: 5px;
+	font-weight: bold;
+	padding: 0.2rem;
+	margin: 1rem 0;
+}
+
+img {
+	display: block;
+	height: auto;
+	border: 1.2px solid var(--btn-color);
+	border-radius: 5px;
+}
+
+figcaption, img {
+	width: clamp(100px, 20vw, 120px);
+}
+
+h2 {
+	font-weight: bold;
+	font-size: 2rem;
+}
+
+h3 {
+	font-weight: bold;
+	font-size: 1.5rem;
+	color: var(--txt-color);
+}
+
+p {
+	color: var(--subtxt-color);
+}
+
+body {
+	background: var(--dark-bg-color);
+	color: var(--txt-color);
+	text-shadow: var(--txt-shadow);
+}
+
+header, section, footer {
+	display: flex;
+	flex: 1;
+	justify-content: center;
+	align-content: center;
+	padding: 1rem 0;
+}
+
+header > div, section > div {
+	width: 80%;
+}
+
+.info, .quote, .action {
+	background: var(--txt-color);
+	color: var(--ttl-txt-color);
+}
+
+header {
+	background: var(--dark-bg-color);
+	position: sticky;
+	top: 0;
+}
+
+header > div {
+	display: flex;
+	justify-content: space-between;
+}
+
+.logo {
+	color: var(--txt-color);
+	font-size: 1.5rem;
+}
+
+nav a {
+	margin-left: 0.5em;
+	font-size: 1.1rem;
+}
+
+.hero > div {
+	display: flex;
+	flex-direction: column-reverse;
+	justify-content: flex-end;
+	gap: 1rem;
+}
+
+.hero-txt {
+	font-weight: bold;
+	font-size: 2.5rem;
+}
+
+.hero img {
+	width: 100%;
+}
+
+.hero figcaption {
+	display: none;
+}
+
+.info {
+	text-align: center;
+}
+
+.img-grp {
+	display: flex;
+	flex: 1;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 1rem;
+	margin-top: 1rem;
+}
+
+.quote {
+	background: var(--subtxt-color);
+	min-height: 20vh;
+	padding: 2rem;
+	font-size: 2rem;
+}
+
+quote {
+	font-style: italic;
+	text-align: justify;
+}
+
+cite {
+	display: block;
+	text-align: right;
+	font-weight: bold;
+	margin-top: 1rem;
+}
+
+.action > div {
+	background: var(--btn-color);
+	border-radius: 5px;
+	padding: 2rem 1rem;
+	display: flex;
+	flex: 1 1 noneauto;
+	justify-content: space-between;
+	align-items: center;
+}
+
+footer a {
+	margin-left: 0.5rem;
+}
+
+@media screen and (min-width: 776px) {
+	.hero > div {
+		flex-direction: row;
+		padding-bottom: 3rem
+	}
+
+	.hero img, .hero .txt-pane {
+		width: 40vw;
+	}
+}
