@@ -95,6 +95,12 @@ header > div {
 	font-size: 1.5rem;
 }
 
+nav {
+	display: flex;
+	align-items: flex-end;
+	flex-wrap: wrap;
+}
+
 nav a {
 	margin-left: 0.5em;
 	font-size: 1.1rem;
@@ -161,10 +167,7 @@ cite {
 	flex: 1 1 noneauto;
 	justify-content: space-between;
 	align-items: center;
-}
-
-footer a {
-	margin-left: 0.5rem;
+	gap: 0.5em;
 }
 
 @media screen and (min-width: 776px) {
